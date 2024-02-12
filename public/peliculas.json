@@ -1,0 +1,239 @@
+{
+  "peliculas" : [
+  {
+  "titulo" : "Principio" ,
+  "director" : "Christopher Nolan" ,
+  "género" : "Acción"
+  },
+  {
+  "titulo" : "Parásito" ,
+  "director" : "Bong Joon-ho" ,
+  "género" : "drama"
+  },
+  {
+  "titulo" : "Alma" ,
+  "director" : "Pete Docter" ,
+  "género" : "Animación"
+  },
+  {
+  "titulo" : "El hombre invisible" ,
+  "director" : "Leigh Whannell" ,
+  "género" : "Ciencia ficción"
+  },
+  {
+  "titulo" : "Película posterior de Borat" ,
+  "director" : "Jason Woliner" ,
+  "género" : "Comedia"
+  },
+  {
+  "titulo" : "Mank" ,
+  "director" : "David Fincher" ,
+  "género" : "drama"
+  },
+  {
+  "titulo" : "El juicio de los 7 de Chicago" ,
+  "director" : "Aaron Sorkin" ,
+  "género" : "drama"
+  },
+  {
+  "titulo" : "El Padre" ,
+  "director" : "Florian Zeller" ,
+  "género" : "drama"
+  },
+  {
+  "titulo" : "El sonido del metal" ,
+  "director" : "Darius Marder" ,
+  "género" : "drama"
+  },
+  {
+  "titulo" : "Joven prometedora" ,
+  "director" : "Esmeralda Fennell" ,
+  "género" : "drama"
+  },
+  {
+  "titulo" : "Adelante" ,
+  "director" : "Dan Scanlon" ,
+  "género" : "Animación"
+  },
+  {
+  "titulo" : "La mitad de esto" ,
+  "director" : "Alice Wu" ,
+  "género" : "drama"
+  },
+  {
+  "titulo" : "La vieja guardia" ,
+  "directora" : "Gina Prince-Bythewood" ,
+  "género" : "Acción"
+  },
+  {
+  "titulo" : "El cielo de medianoche" ,
+  "director" : "George Clooney" ,
+  "género" : "Ciencia ficción"
+  },
+  {
+  "titulo" : "Da 5 Bloods" ,
+  "director" : "Spike Lee" ,
+  "género" : "drama"
+  },
+  {
+  "titulo" : "El puesto de avanzada" ,
+  "director" : "Rod Lurie" ,
+  "género" : "Bélico"
+  },
+  {
+  "titulo" : "El diablo todo el tiempo" ,
+  "director" : "Antonio Campos" ,
+  "género" : "drama"
+  },
+  {
+  "titulo" : "La llamada de lo salvaje" ,
+  "director" : "Chris Sanders" ,
+  "género" : "Aventura"
+  },
+  {
+  "titulo" : "La Plataforma" ,
+  "director" : "Galder Gaztelu-Urrutia" ,
+  "género" : "Ciencia ficción"
+  },
+  {
+  "titulo" : "Galgo" ,
+  "director" : "Aaron Schneider" ,
+  "género" : "Bélico"
+  },
+  {
+  "titulo" : "El rey de Staten Island" ,
+  "director" : "Judd Apatow" ,
+  "género" : "Comedia"
+  },
+  {
+  "titulo" : "La inmensidad de la noche" ,
+  "director" : "Andrew Patterson" ,
+  "género" : "Ciencia ficción"
+  },
+  {
+  "titulo" : "Estoy pensando en acabar con las cosas" ,
+  "director" : "Charlie Kaufman" ,
+  "género" : "drama"
+  },
+  {
+  "titulo" : "La Logia" ,
+  "directora" : "Verónika Franz" ,
+  "género" : "Terror"
+  },
+  {
+  "titulo" : "La Sección de Ritmo" ,
+  "director" : "Reed Morano" ,
+  "género" : "Acción"
+  },
+  {
+  "titulo" : "La niñera: Killer Queen" ,
+  "director" : "McG" ,
+  "género" : "Comedia"
+  },
+  {
+  "titulo" : "Las Brujas" ,
+  "director" : "Robert Zemeckis" ,
+  "género" : "Fantasía"
+  },
+  {
+  "titulo" : "Los Agapornis" ,
+  "director" : "Michael Showalter" ,
+  "género" : "Comedia"
+  },
+  {
+  "titulo" : "El único Iván" ,
+  "directora" : "Thea Sharrock" ,
+  "género" : "Animación"
+  },
+  {
+  "titulo" : "La Fotografía" ,
+  "directora" : "Stella Meghie" ,
+  "género" : "drama"
+  },
+  {
+  "titulo" : "Los nuevos mutantes" ,
+  "director" : "Josh Boone" ,
+  "género" : "Acción"
+  },
+  {
+  "titulo" : "La nota alta" ,
+  "directora" : "Nisha Ganatra" ,
+  "género" : "drama"
+  },
+  {
+  "titulo" : "El rencor" ,
+  "director" : "Nicolás Pesce" ,
+  "género" : "Terror"
+  },
+  {
+  "titulo" : "El baile de graduación" ,
+  "director" : "Ryan Murphy" ,
+  "género" : "musical"
+  },
+  {
+  "titulo" : "La cabina de los besos 2" ,
+  "director" : "Vince Marcello" ,
+  "género" : "Comedia"
+  },
+  {
+  "titulo" : "El hombre vacío" ,
+  "director" : "David Prior" ,
+  "género" : "Terror"
+  },
+  {
+  "titulo" : "El giro" ,
+  "directora" : "Floria Sigismondi" ,
+  "género" : "Terror"
+  },
+  {
+  "titulo" : "Los Señores" ,
+  "director" : "Guy Ritchie" ,
+  "género" : "Acción"
+  },
+  {
+  "titulo" : "La caza" ,
+  "director" : "Craig Zobel" ,
+  "género" : "Acción"
+  },
+  {
+  "titulo" : "The Craft: Legacy" ,
+  "director" : "Zoe Lister-Jones" ,
+  "género" : "Terror"
+  },
+  {
+  "titulo" : "La mitad de esto" ,
+  "director" : "Alice Wu" ,
+  "género" : "drama"
+  },
+  {
+  "titulo" : "La historia personal de David Copperfield" ,
+  "director" : "Armando Iannucci" ,
+  "género" : "Comedia"
+  },
+  {
+  "titulo" : "El juicio de los 7 de Chicago" ,
+  "director" : "Aaron Sorkin" ,
+  "género" : "drama"
+  },
+  {
+  "titulo" : "El camino de regreso" ,
+  "director" : "Gavin O'Connor" ,
+  "género" : "drama"
+  },
+  {
+  "titulo" : "El Asistente" ,
+  "director" : "Gatito Verde" ,
+  "género" : "drama"
+  },
+  {
+  "titulo" : "El cielo de medianoche" ,
+  "director" : "George Clooney" ,
+  "género" : "Ciencia ficción"
+  },
+  {
+  "titulo" : "La Sección de Ritmo" ,
+  "director" : "Reed Morano" ,
+  "género" : "Acción"
+  }
+  ]
+  }

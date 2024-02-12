@@ -1,0 +1,950 @@
+{
+	"info": {
+		"_postman_id": "83f24307-d0df-48de-a291-4bafb5452033",
+		"name": "Peliculas Api",
+		"description": "Documentacion del Proyecto de Laboratorio 4.\n\nTema: PELICULAS\n\nAPI: The movie data base",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24364633"
+	},
+	"item": [
+		{
+			"name": "Errores",
+			"item": [
+				{
+					"name": "Estrenos (error 401)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.themoviedb.org/3/movie/upcoming",
+							"protocol": "https",
+							"host": [
+								"api",
+								"themoviedb",
+								"org"
+							],
+							"path": [
+								"3",
+								"movie",
+								"upcoming"
+							]
+						},
+						"description": "Mostramos la funcionalidad del error 401, al no proporcionar api_key en el request."
+					},
+					"response": [
+						{
+							"name": "Error 401",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.themoviedb.org/3/movie/upcoming",
+									"protocol": "https",
+									"host": [
+										"api",
+										"themoviedb",
+										"org"
+									],
+									"path": [
+										"3",
+										"movie",
+										"upcoming"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Sep 2023 17:10:13 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "openresty"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "public, max-age=300"
+								},
+								{
+									"key": "X-Cache",
+									"value": "Error from cloudfront"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 9ef84cf4cc2ba519912977f9e63d129e.cloudfront.net (CloudFront)"
+								},
+								{
+									"key": "X-Amz-Cf-Pop",
+									"value": "MIA3-C5"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=86400"
+								},
+								{
+									"key": "X-Amz-Cf-Id",
+									"value": "V48LrPaAUL_CCtoSFWCrHwn2QCtJTEAPmUMt5IEkPz2s__gDQvVOnQ=="
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status_code\": 7,\n    \"status_message\": \"Invalid API key: You must be granted a valid key.\",\n    \"success\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "ruta inexistente (error 404)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.themoviedb.org/3/movie/laSirenita?api_key={{api_key}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"themoviedb",
+								"org"
+							],
+							"path": [
+								"3",
+								"movie",
+								"laSirenita"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "{{api_key}}"
+								}
+							]
+						},
+						"description": "Añadimos una ruta que no existe, para mostrar el error 404."
+					},
+					"response": [
+						{
+							"name": "Error 404",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.themoviedb.org/3/movie/laSirenita?api_key={{api_key}}",
+									"protocol": "https",
+									"host": [
+										"api",
+										"themoviedb",
+										"org"
+									],
+									"path": [
+										"3",
+										"movie",
+										"laSirenita"
+									],
+									"query": [
+										{
+											"key": "api_key",
+											"value": "{{api_key}}"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Sep 2023 17:12:51 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "openresty"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "public, max-age=28098"
+								},
+								{
+									"key": "X-Memc",
+									"value": "MISS"
+								},
+								{
+									"key": "X-Memc-Key",
+									"value": "1d468c2ef829233a532012388ede28fd"
+								},
+								{
+									"key": "X-Memc-Age",
+									"value": "0"
+								},
+								{
+									"key": "X-Memc-Expires",
+									"value": "28098"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "X-Cache",
+									"value": "Error from cloudfront"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 9ef84cf4cc2ba519912977f9e63d129e.cloudfront.net (CloudFront)"
+								},
+								{
+									"key": "X-Amz-Cf-Pop",
+									"value": "MIA3-C5"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "h3=\":443\"; ma=86400"
+								},
+								{
+									"key": "X-Amz-Cf-Id",
+									"value": "yZt-WDCMxzh5eVS3B67iQ-MP8De5z0cLzwciaM1ji3i1ay1xW8nGcw=="
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": false,\n    \"status_code\": 34,\n    \"status_message\": \"The resource you requested could not be found.\"\n}"
+						}
+					]
+				}
+			],
+			"description": "Mostramos la funcionalidad de los errores 401 y 404."
+		},
+		{
+			"name": "Registros",
+			"item": [
+				{
+					"name": "peliculas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5003/peliculas.json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"peliculas.json"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "peliculas",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5003/peliculas.json",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5003",
+									"path": [
+										"peliculas.json"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Accept-Ranges",
+									"value": "bytes"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "public, max-age=0"
+								},
+								{
+									"key": "Last-Modified",
+									"value": "Tue, 26 Sep 2023 19:21:08 GMT"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13b5-18ad2f027fe\""
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "5045"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Sep 2023 19:32:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"peliculas\": [\n        {\n            \"titulo\": \"Principio\",\n            \"director\": \"Christopher Nolan\",\n            \"género\": \"Acción\"\n        },\n        {\n            \"titulo\": \"Parásito\",\n            \"director\": \"Bong Joon-ho\",\n            \"género\": \"drama\"\n        },\n        {\n            \"titulo\": \"Alma\",\n            \"director\": \"Pete Docter\",\n            \"género\": \"Animación\"\n        },\n        {\n            \"titulo\": \"El hombre invisible\",\n            \"director\": \"Leigh Whannell\",\n            \"género\": \"Ciencia ficción\"\n        },\n        {\n            \"titulo\": \"Película posterior de Borat\",\n            \"director\": \"Jason Woliner\",\n            \"género\": \"Comedia\"\n        },\n        {\n            \"titulo\": \"Mank\",\n            \"director\": \"David Fincher\",\n            \"género\": \"drama\"\n        },\n        {\n            \"titulo\": \"El juicio de los 7 de Chicago\",\n            \"director\": \"Aaron Sorkin\",\n            \"género\": \"drama\"\n        },\n        {\n            \"titulo\": \"El Padre\",\n            \"director\": \"Florian Zeller\",\n            \"género\": \"drama\"\n        },\n        {\n            \"titulo\": \"El sonido del metal\",\n            \"director\": \"Darius Marder\",\n            \"género\": \"drama\"\n        },\n        {\n            \"titulo\": \"Joven prometedora\",\n            \"director\": \"Esmeralda Fennell\",\n            \"género\": \"drama\"\n        },\n        {\n            \"titulo\": \"Adelante\",\n            \"director\": \"Dan Scanlon\",\n            \"género\": \"Animación\"\n        },\n        {\n            \"titulo\": \"La mitad de esto\",\n            \"director\": \"Alice Wu\",\n            \"género\": \"drama\"\n        },\n        {\n            \"titulo\": \"La vieja guardia\",\n            \"directora\": \"Gina Prince-Bythewood\",\n            \"género\": \"Acción\"\n        },\n        {\n            \"titulo\": \"El cielo de medianoche\",\n            \"director\": \"George Clooney\",\n            \"género\": \"Ciencia ficción\"\n        },\n        {\n            \"titulo\": \"Da 5 Bloods\",\n            \"director\": \"Spike Lee\",\n            \"género\": \"drama\"\n        },\n        {\n            \"titulo\": \"El puesto de avanzada\",\n            \"director\": \"Rod Lurie\",\n            \"género\": \"Bélico\"\n        },\n        {\n            \"titulo\": \"El diablo todo el tiempo\",\n            \"director\": \"Antonio Campos\",\n            \"género\": \"drama\"\n        },\n        {\n            \"titulo\": \"La llamada de lo salvaje\",\n            \"director\": \"Chris Sanders\",\n            \"género\": \"Aventura\"\n        },\n        {\n            \"titulo\": \"La Plataforma\",\n            \"director\": \"Galder Gaztelu-Urrutia\",\n            \"género\": \"Ciencia ficción\"\n        },\n        {\n            \"titulo\": \"Galgo\",\n            \"director\": \"Aaron Schneider\",\n            \"género\": \"Bélico\"\n        },\n        {\n            \"titulo\": \"El rey de Staten Island\",\n            \"director\": \"Judd Apatow\",\n            \"género\": \"Comedia\"\n        },\n        {\n            \"titulo\": \"La inmensidad de la noche\",\n            \"director\": \"Andrew Patterson\",\n            \"género\": \"Ciencia ficción\"\n        },\n        {\n            \"titulo\": \"Estoy pensando en acabar con las cosas\",\n            \"director\": \"Charlie Kaufman\",\n            \"género\": \"drama\"\n        },\n        {\n            \"titulo\": \"La Logia\",\n            \"directora\": \"Verónika Franz\",\n            \"género\": \"Terror\"\n        },\n        {\n            \"titulo\": \"La Sección de Ritmo\",\n            \"director\": \"Reed Morano\",\n            \"género\": \"Acción\"\n        },\n        {\n            \"titulo\": \"La niñera: Killer Queen\",\n            \"director\": \"McG\",\n            \"género\": \"Comedia\"\n        },\n        {\n            \"titulo\": \"Las Brujas\",\n            \"director\": \"Robert Zemeckis\",\n            \"género\": \"Fantasía\"\n        },\n        {\n            \"titulo\": \"Los Agapornis\",\n            \"director\": \"Michael Showalter\",\n            \"género\": \"Comedia\"\n        },\n        {\n            \"titulo\": \"El único Iván\",\n            \"directora\": \"Thea Sharrock\",\n            \"género\": \"Animación\"\n        },\n        {\n            \"titulo\": \"La Fotografía\",\n            \"directora\": \"Stella Meghie\",\n            \"género\": \"drama\"\n        },\n        {\n            \"titulo\": \"Los nuevos mutantes\",\n            \"director\": \"Josh Boone\",\n            \"género\": \"Acción\"\n        },\n        {\n            \"titulo\": \"La nota alta\",\n            \"directora\": \"Nisha Ganatra\",\n            \"género\": \"drama\"\n        },\n        {\n            \"titulo\": \"El rencor\",\n            \"director\": \"Nicolás Pesce\",\n            \"género\": \"Terror\"\n        },\n        {\n            \"titulo\": \"El baile de graduación\",\n            \"director\": \"Ryan Murphy\",\n            \"género\": \"musical\"\n        },\n        {\n            \"titulo\": \"La cabina de los besos 2\",\n            \"director\": \"Vince Marcello\",\n            \"género\": \"Comedia\"\n        },\n        {\n            \"titulo\": \"El hombre vacío\",\n            \"director\": \"David Prior\",\n            \"género\": \"Terror\"\n        },\n        {\n            \"titulo\": \"El giro\",\n            \"directora\": \"Floria Sigismondi\",\n            \"género\": \"Terror\"\n        },\n        {\n            \"titulo\": \"Los Señores\",\n            \"director\": \"Guy Ritchie\",\n            \"género\": \"Acción\"\n        },\n        {\n            \"titulo\": \"La caza\",\n            \"director\": \"Craig Zobel\",\n            \"género\": \"Acción\"\n        },\n        {\n            \"titulo\": \"The Craft: Legacy\",\n            \"director\": \"Zoe Lister-Jones\",\n            \"género\": \"Terror\"\n        },\n        {\n            \"titulo\": \"La mitad de esto\",\n            \"director\": \"Alice Wu\",\n            \"género\": \"drama\"\n        },\n        {\n            \"titulo\": \"La historia personal de David Copperfield\",\n            \"director\": \"Armando Iannucci\",\n            \"género\": \"Comedia\"\n        },\n        {\n            \"titulo\": \"El juicio de los 7 de Chicago\",\n            \"director\": \"Aaron Sorkin\",\n            \"género\": \"drama\"\n        },\n        {\n            \"titulo\": \"El camino de regreso\",\n            \"director\": \"Gavin O'Connor\",\n            \"género\": \"drama\"\n        },\n        {\n            \"titulo\": \"El Asistente\",\n            \"director\": \"Gatito Verde\",\n            \"género\": \"drama\"\n        },\n        {\n            \"titulo\": \"El cielo de medianoche\",\n            \"director\": \"George Clooney\",\n            \"género\": \"Ciencia ficción\"\n        },\n        {\n            \"titulo\": \"La Sección de Ritmo\",\n            \"director\": \"Reed Morano\",\n            \"género\": \"Acción\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5003/usuarios.json",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"usuarios.json"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "usuarios",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5003/usuarios.json",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5003",
+									"path": [
+										"usuarios.json"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Accept-Ranges",
+									"value": "bytes"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "public, max-age=0"
+								},
+								{
+									"key": "Last-Modified",
+									"value": "Tue, 26 Sep 2023 19:21:08 GMT"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e94-18ad2f027ff\""
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "3732"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 26 Sep 2023 19:33:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"usuarios\": [\n        {\n            \"id\": 1,\n            \"nombre\": \"Juan Pérez\"\n        },\n        {\n            \"id\": 2,\n            \"nombre\": \"María González\"\n        },\n        {\n            \"id\": 3,\n            \"nombre\": \"Luis Rodríguez\"\n        },\n        {\n            \"id\": 4,\n            \"nombre\": \"Ana Martínez\"\n        },\n        {\n            \"id\": 5,\n            \"nombre\": \"Carlos López\"\n        },\n        {\n            \"id\": 6,\n            \"nombre\": \"Laura Sánchez\"\n        },\n        {\n            \"id\": 7,\n            \"nombre\": \"Pedro García\"\n        },\n        {\n            \"id\": 8,\n            \"nombre\": \"Rosa Fernández\"\n        },\n        {\n            \"id\": 9,\n            \"nombre\": \"Javier Ramírez\"\n        },\n        {\n            \"id\": 10,\n            \"nombre\": \"Sofía Torres\"\n        },\n        {\n            \"id\": 11,\n            \"nombre\": \"Miguel Reyes\"\n        },\n        {\n            \"id\": 12,\n            \"nombre\": \"Carmen Morales\"\n        },\n        {\n            \"id\": 13,\n            \"nombre\": \"Diego Castro\"\n        },\n        {\n            \"id\": 14,\n            \"nombre\": \"Paula Herrera\"\n        },\n        {\n            \"id\": 15,\n            \"nombre\": \"Fernando Jiménez\"\n        },\n        {\n            \"id\": 16,\n            \"nombre\": \"Isabel Pérez\"\n        },\n        {\n            \"id\": 17,\n            \"nombre\": \"José García\"\n        },\n        {\n            \"id\": 18,\n            \"nombre\": \"Elena López\"\n        },\n        {\n            \"id\": 19,\n            \"nombre\": \"Andrés Martínez\"\n        },\n        {\n            \"id\": 20,\n            \"nombre\": \"Lucía González\"\n        },\n        {\n            \"id\": 21,\n            \"nombre\": \"Ricardo Ruiz\"\n        },\n        {\n            \"id\": 22,\n            \"nombre\": \"Marina Rodríguez\"\n        },\n        {\n            \"id\": 23,\n            \"nombre\": \"Alejandro Torres\"\n        },\n        {\n            \"id\": 24,\n            \"nombre\": \"Raquel Sánchez\"\n        },\n        {\n            \"id\": 25,\n            \"nombre\": \"Gabriel Flores\"\n        },\n        {\n            \"id\": 26,\n            \"nombre\": \"Marta Ramírez\"\n        },\n        {\n            \"id\": 27,\n            \"nombre\": \"Antonio Díaz\"\n        },\n        {\n            \"id\": 28,\n            \"nombre\": \"Sara Vargas\"\n        },\n        {\n            \"id\": 29,\n            \"nombre\": \"Alberto Castro\"\n        },\n        {\n            \"id\": 30,\n            \"nombre\": \"Cristina Herrera\"\n        },\n        {\n            \"id\": 31,\n            \"nombre\": \"Francisco López\"\n        },\n        {\n            \"id\": 32,\n            \"nombre\": \"Natalia González\"\n        },\n        {\n            \"id\": 33,\n            \"nombre\": \"Héctor Torres\"\n        },\n        {\n            \"id\": 34,\n            \"nombre\": \"Beatriz Martínez\"\n        },\n        {\n            \"id\": 35,\n            \"nombre\": \"Joaquín Pérez\"\n        },\n        {\n            \"id\": 36,\n            \"nombre\": \"Lourdes Rodríguez\"\n        },\n        {\n            \"id\": 37,\n            \"nombre\": \"Mario Sánchez\"\n        },\n        {\n            \"id\": 38,\n            \"nombre\": \"Adela Jiménez\"\n        },\n        {\n            \"id\": 39,\n            \"nombre\": \"Víctor García\"\n        },\n        {\n            \"id\": 40,\n            \"nombre\": \"Clara Morales\"\n        },\n        {\n            \"id\": 41,\n            \"nombre\": \"Manuel Castro\"\n        },\n        {\n            \"id\": 42,\n            \"nombre\": \"Carolina Ruiz\"\n        },\n        {\n            \"id\": 43,\n            \"nombre\": \"Alberto Díaz\"\n        },\n        {\n            \"id\": 44,\n            \"nombre\": \"Elisa Sánchez\"\n        },\n        {\n            \"id\": 45,\n            \"nombre\": \"Jorge Pérez\"\n        },\n        {\n            \"id\": 46,\n            \"nombre\": \"Sandra Martínez\"\n        },\n        {\n            \"id\": 47,\n            \"nombre\": \"Roberto López\"\n        },\n        {\n            \"id\": 48,\n            \"nombre\": \"Ana Ramírez\"\n        },\n        {\n            \"id\": 49,\n            \"nombre\": \"Juan González\"\n        },\n        {\n            \"id\": 50,\n            \"nombre\": \"Lucía Torres\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"description": "50 registros en formato json"
+		},
+		{
+			"name": "estrenos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.themoviedb.org/3/movie/upcoming?api_key={{api_key}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"themoviedb",
+						"org"
+					],
+					"path": [
+						"3",
+						"movie",
+						"upcoming"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "{{api_key}}"
+						}
+					]
+				},
+				"description": "Se muestran las peliculas prontas al estreno."
+			},
+			"response": [
+				{
+					"name": "estrenos",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.themoviedb.org/3/movie/upcoming?api_key={{api_key}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"themoviedb",
+								"org"
+							],
+							"path": [
+								"3",
+								"movie",
+								"upcoming"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "{{api_key}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Sep 2023 16:44:29 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "openresty"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "public, max-age=0"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding,Accept-Encoding"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-Cache",
+							"value": "Miss from cloudfront"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 a782b2219163c48526f5b10315d332fa.cloudfront.net (CloudFront)"
+						},
+						{
+							"key": "X-Amz-Cf-Pop",
+							"value": "MIA3-P5"
+						},
+						{
+							"key": "Alt-Svc",
+							"value": "h3=\":443\"; ma=86400"
+						},
+						{
+							"key": "X-Amz-Cf-Id",
+							"value": "KNMJods7amUzRgnaakl3JjYg3szbpB4SoKCqcSXHiB6EFDqqQKoJBQ=="
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"dates\": {\n        \"maximum\": \"2023-10-20\",\n        \"minimum\": \"2023-09-25\"\n    },\n    \"page\": 1,\n    \"results\": [\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/H6j5smdpRqP9a8UnhWp6zfl0SC.jpg\",\n            \"genre_ids\": [\n                28,\n                878,\n                12\n            ],\n            \"id\": 565770,\n            \"original_language\": \"en\",\n            \"original_title\": \"Blue Beetle\",\n            \"overview\": \"Recent college grad Jaime Reyes returns home full of aspirations for his future, only to find that home is not quite as he left it. As he searches to find his purpose in the world, fate intervenes when Jaime unexpectedly finds himself in possession of an ancient relic of alien biotechnology: the Scarab.\",\n            \"popularity\": 4198.111,\n            \"poster_path\": \"/mXLOHHc1Zeuwsl4xYKjKh2280oL.jpg\",\n            \"release_date\": \"2023-08-16\",\n            \"title\": \"Blue Beetle\",\n            \"video\": false,\n            \"vote_average\": 7.1,\n            \"vote_count\": 824\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/iiXliCeykkzmJ0Eg9RYJ7F2CWSz.jpg\",\n            \"genre_ids\": [\n                28,\n                9648,\n                53,\n                80\n            ],\n            \"id\": 762430,\n            \"original_language\": \"en\",\n            \"original_title\": \"Retribution\",\n            \"overview\": \"When a mysterious caller puts a bomb under his car seat, Matt Turner begins a high-speed chase across the city to complete a specific series of tasks. With his kids trapped in the back seat and a bomb that will explode if they get out of the car, a normal commute becomes a twisted game of life or death as Matt follows the stranger's increasingly dangerous instructions in a race against time to save his family.\",\n            \"popularity\": 2304.763,\n            \"poster_path\": \"/oUmmY7QWWn7OhKlcPOnirHJpP1F.jpg\",\n            \"release_date\": \"2023-08-23\",\n            \"title\": \"Retribution\",\n            \"video\": false,\n            \"vote_average\": 6.8,\n            \"vote_count\": 199\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/iIvQnZyzgx9TkbrOgcXx0p7aLiq.jpg\",\n            \"genre_ids\": [\n                27,\n                53\n            ],\n            \"id\": 1008042,\n            \"original_language\": \"en\",\n            \"original_title\": \"Talk to Me\",\n            \"overview\": \"When a group of friends discover how to conjure spirits using an embalmed hand, they become hooked on the new thrill, until one of them goes too far and unleashes terrifying supernatural forces.\",\n            \"popularity\": 1762.732,\n            \"poster_path\": \"/kdPMUMJzyYAc4roD52qavX0nLIC.jpg\",\n            \"release_date\": \"2023-07-26\",\n            \"title\": \"Talk to Me\",\n            \"video\": false,\n            \"vote_average\": 7.2,\n            \"vote_count\": 826\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/53z2fXEKfnNg2uSOPss2unPBGX1.jpg\",\n            \"genre_ids\": [\n                27,\n                9648,\n                53\n            ],\n            \"id\": 968051,\n            \"original_language\": \"en\",\n            \"original_title\": \"The Nun II\",\n            \"overview\": \"In 1956 France, a priest is violently murdered, and Sister Irene begins to investigate. She once again comes face-to-face with a powerful evil.\",\n            \"popularity\": 1428.836,\n            \"poster_path\": \"/5gzzkR7y3hnY8AD1wXjCnVlHba5.jpg\",\n            \"release_date\": \"2023-09-06\",\n            \"title\": \"The Nun II\",\n            \"video\": false,\n            \"vote_average\": 6.6,\n            \"vote_count\": 300\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/waBWlJlMpyFb7STkFHfFvJKgwww.jpg\",\n            \"genre_ids\": [\n                28,\n                18\n            ],\n            \"id\": 678512,\n            \"original_language\": \"en\",\n            \"original_title\": \"Sound of Freedom\",\n            \"overview\": \"The story of Tim Ballard, a former US government agent, who quits his job in order to devote his life to rescuing children from global sex traffickers.\",\n            \"popularity\": 745.902,\n            \"poster_path\": \"/kSf9svfL2WrKeuK8W08xeR5lTn8.jpg\",\n            \"release_date\": \"2023-07-03\",\n            \"title\": \"Sound of Freedom\",\n            \"video\": false,\n            \"vote_average\": 8,\n            \"vote_count\": 471\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/1HzL603WOer58xtnrRYdSIL5K04.jpg\",\n            \"genre_ids\": [\n                35,\n                12\n            ],\n            \"id\": 912908,\n            \"original_language\": \"en\",\n            \"original_title\": \"Strays\",\n            \"overview\": \"When Reggie is abandoned on the mean city streets by his lowlife owner, Doug, Reggie is certain that his beloved owner would never leave him on purpose. But once Reggie falls in with Bug, a fast-talking, foul-mouthed stray who loves his freedom and believes that owners are for suckers, Reggie finally realizes he was in a toxic relationship and begins to see Doug for the heartless sleazeball that he is.\",\n            \"popularity\": 500.032,\n            \"poster_path\": \"/n1hqbSCtyBAxaXEl1Dj3ipXJAJG.jpg\",\n            \"release_date\": \"2023-08-17\",\n            \"title\": \"Strays\",\n            \"video\": false,\n            \"vote_average\": 7.5,\n            \"vote_count\": 349\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/rMvPXy8PUjj1o8o1pzgQbdNCsvj.jpg\",\n            \"genre_ids\": [\n                28,\n                12,\n                53\n            ],\n            \"id\": 299054,\n            \"original_language\": \"en\",\n            \"original_title\": \"Expend4bles\",\n            \"overview\": \"Armed with every weapon they can get their hands on and the skills to use them, The Expendables are the world’s last line of defense and the team that gets called when all other options are off the table. But new team members with new styles and tactics are going to give “new blood” a whole new meaning.\",\n            \"popularity\": 488.259,\n            \"poster_path\": \"/nbrqj9q8WubD3QkYm7n3GhjN7kE.jpg\",\n            \"release_date\": \"2023-09-15\",\n            \"title\": \"Expend4bles\",\n            \"video\": false,\n            \"vote_average\": 6.6,\n            \"vote_count\": 55\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/h0nmmdFAdBjQttN8Y0q825MWzZp.jpg\",\n            \"genre_ids\": [\n                28,\n                53,\n                80\n            ],\n            \"id\": 926393,\n            \"original_language\": \"en\",\n            \"original_title\": \"The Equalizer 3\",\n            \"overview\": \"Robert McCall finds himself at home in Southern Italy but he discovers his friends are under the control of local crime bosses. As events turn deadly, McCall knows what he has to do: become his friends' protector by taking on the mafia.\",\n            \"popularity\": 450.341,\n            \"poster_path\": \"/b0Ej6fnXAP8fK75hlyi2jKqdhHz.jpg\",\n            \"release_date\": \"2023-08-30\",\n            \"title\": \"The Equalizer 3\",\n            \"video\": false,\n            \"vote_average\": 6.9,\n            \"vote_count\": 225\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/qEm4FrkGh7kGoEiBOyGYNielYVc.jpg\",\n            \"genre_ids\": [\n                53,\n                27\n            ],\n            \"id\": 635910,\n            \"original_language\": \"en\",\n            \"original_title\": \"The Last Voyage of the Demeter\",\n            \"overview\": \"The crew of the merchant ship Demeter attempts to survive the ocean voyage from Carpathia to London as they are stalked each night by a merciless presence onboard the ship.\",\n            \"popularity\": 409.961,\n            \"poster_path\": \"/nrtbv6Cew7qC7k9GsYSf5uSmuKh.jpg\",\n            \"release_date\": \"2023-08-09\",\n            \"title\": \"The Last Voyage of the Demeter\",\n            \"video\": false,\n            \"vote_average\": 7.4,\n            \"vote_count\": 680\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/A8paSZwFPs5EmMGE2hbNGKqBfC5.jpg\",\n            \"genre_ids\": [\n                28,\n                14,\n                10752\n            ],\n            \"id\": 856289,\n            \"original_language\": \"zh\",\n            \"original_title\": \"封神第一部：朝歌风云\",\n            \"overview\": \"Based on the most well-known classical fantasy novel of China, Fengshenyanyi, the trilogy is a magnificent eastern high fantasy epic that recreates the prolonged mythical wars between humans, immortals and monsters, which happened more than three thousand years ago.\",\n            \"popularity\": 312.972,\n            \"poster_path\": \"/ccJpK0rqzhQeP7Mrs2uKqObFY4L.jpg\",\n            \"release_date\": \"2023-07-20\",\n            \"title\": \"Creation of the Gods I: Kingdom of Storms\",\n            \"video\": false,\n            \"vote_average\": 7.5,\n            \"vote_count\": 79\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/qZOuoBoKCDLSm1EvYz2eBub8Cto.jpg\",\n            \"genre_ids\": [\n                16,\n                12,\n                14,\n                10751\n            ],\n            \"id\": 939338,\n            \"original_language\": \"fr\",\n            \"original_title\": \"Pattie et la colère de Poséidon\",\n            \"overview\": \"An adventurous mouse sets off to battle dangerous creatures in Ancient Greece, including Poseidon.\",\n            \"popularity\": 303.66,\n            \"poster_path\": \"/gVPw9gRPsZZhzY6cIXp6h6nep5M.jpg\",\n            \"release_date\": \"2023-01-25\",\n            \"title\": \"Epic Tails\",\n            \"video\": false,\n            \"vote_average\": 6.8,\n            \"vote_count\": 32\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/9b3uxqcjkmay20EBZZj1KVow0r5.jpg\",\n            \"genre_ids\": [\n                80,\n                27,\n                53\n            ],\n            \"id\": 951491,\n            \"original_language\": \"en\",\n            \"original_title\": \"Saw X\",\n            \"overview\": \"Between the events of 'Saw' and 'Saw II', a sick and desperate John Kramer travels to Mexico for a risky and experimental medical procedure in hopes of a miracle cure for his cancer, only to discover the entire operation is a scam to defraud the most vulnerable. Armed with a newfound purpose, the infamous serial killer returns to his work, turning the tables on the con artists in his signature visceral way through devious, deranged, and ingenious traps.\",\n            \"popularity\": 271.492,\n            \"poster_path\": \"/hYaKxnvqQt4pMtFy5KptUYJo1S0.jpg\",\n            \"release_date\": \"2023-09-26\",\n            \"title\": \"Saw X\",\n            \"video\": false,\n            \"vote_average\": 5.9,\n            \"vote_count\": 4\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/vT17lPUglrAzjEqMwjPpIDe49ty.jpg\",\n            \"genre_ids\": [\n                16,\n                12,\n                10751,\n                14\n            ],\n            \"id\": 459003,\n            \"original_language\": \"uk\",\n            \"original_title\": \"Мавка: Лісова пісня\",\n            \"overview\": \"Mavka — a Soul of the Forest and its Warden — faces an impossible choice between love and her duty as guardian to the Heart of the Forest, when she falls in love with a human — the talented young musician Lukas.\",\n            \"popularity\": 241.023,\n            \"poster_path\": \"/eeJjd9JU2Mdj9d7nWRFLWlrcExi.jpg\",\n            \"release_date\": \"2023-03-02\",\n            \"title\": \"Mavka: The Forest Song\",\n            \"video\": false,\n            \"vote_average\": 7.4,\n            \"vote_count\": 384\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/iEFuHjqrE059SmflBva1JzDJutE.jpg\",\n            \"genre_ids\": [\n                16,\n                10751,\n                28,\n                14,\n                10749\n            ],\n            \"id\": 496450,\n            \"original_language\": \"fr\",\n            \"original_title\": \"Miraculous - le film\",\n            \"overview\": \"A life of an ordinary Parisian teenager Marinette goes superhuman when she becomes Ladybug. Bestowed with magical powers of creation, Ladybug must unite with her opposite, Cat Noir, to save Paris as a new villain unleashes chaos unto the city.\",\n            \"popularity\": 238.792,\n            \"poster_path\": \"/dQNJ8SdCMn3zWwHzzQD2xrphR1X.jpg\",\n            \"release_date\": \"2023-07-05\",\n            \"title\": \"Miraculous: Ladybug & Cat Noir, The Movie\",\n            \"video\": false,\n            \"vote_average\": 7.8,\n            \"vote_count\": 588\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/8TGfsSTWypvkcOX5sqQ7EuMmQkA.jpg\",\n            \"genre_ids\": [\n                35\n            ],\n            \"id\": 986054,\n            \"original_language\": \"en\",\n            \"original_title\": \"Theater Camp\",\n            \"overview\": \"After the indomitable and beloved founder of a scrappy theater camp in upstate New York falls into a coma, the eccentric staff must band together with her clueless \\\"crypto-bro\\\" son to keep the thespian paradise afloat.\",\n            \"popularity\": 221.173,\n            \"poster_path\": \"/2osbLk1MMt9qjXPKSB2hMcBUyrw.jpg\",\n            \"release_date\": \"2023-07-13\",\n            \"title\": \"Theater Camp\",\n            \"video\": false,\n            \"vote_average\": 6.5,\n            \"vote_count\": 48\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/iQcCAm8hKWZyUntqrvzyEGtXyJl.jpg\",\n            \"genre_ids\": [\n                878,\n                28,\n                53\n            ],\n            \"id\": 670292,\n            \"original_language\": \"en\",\n            \"original_title\": \"The Creator\",\n            \"overview\": \"Amid a future war between the human race and the forces of artificial intelligence, a hardened ex-special forces agent grieving the disappearance of his wife, is recruited to hunt down and kill the Creator, the elusive architect of advanced AI who has developed a mysterious weapon with the power to end the war—and mankind itself.\",\n            \"popularity\": 211.878,\n            \"poster_path\": \"/vBZ0qvaRxqEhZwl6LWmruJqWE8Z.jpg\",\n            \"release_date\": \"2023-09-27\",\n            \"title\": \"The Creator\",\n            \"video\": false,\n            \"vote_average\": 7.7,\n            \"vote_count\": 5\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/8FhKnPpql374qyyHAkZDld93IUw.jpg\",\n            \"genre_ids\": [\n                9648,\n                53,\n                878\n            ],\n            \"id\": 536437,\n            \"original_language\": \"en\",\n            \"original_title\": \"Hypnotic\",\n            \"overview\": \"A detective becomes entangled in a mystery involving his missing daughter and a secret government program while investigating a string of reality-bending crimes.\",\n            \"popularity\": 204.587,\n            \"poster_path\": \"/mv362kHXz4Yr33wtQhqfcJWFM8G.jpg\",\n            \"release_date\": \"2023-05-11\",\n            \"title\": \"Hypnotic\",\n            \"video\": false,\n            \"vote_average\": 6.5,\n            \"vote_count\": 582\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/f33XdT6dwNXmXQNvQ4FuyhQrUob.jpg\",\n            \"genre_ids\": [\n                27\n            ],\n            \"id\": 807172,\n            \"original_language\": \"en\",\n            \"original_title\": \"The Exorcist: Believer\",\n            \"overview\": \"Since the death of his wife 12 years ago, Victor Fielding has raised their daughter, Angela on his own. But when Angela and her friend Katherine disappear in the woods, only to return three days later with no memory of what happened to them, it unleashes a chain of events that will force Victor to confront the nadir of evil and, in his terror and desperation, seek out the only person alive who has witnessed anything like it before: Chris MacNeil.\",\n            \"popularity\": 140.648,\n            \"poster_path\": \"/thTULd2MorLIBbK90XF5mdxj4Ds.jpg\",\n            \"release_date\": \"2023-10-05\",\n            \"title\": \"The Exorcist: Believer\",\n            \"video\": false,\n            \"vote_average\": 0,\n            \"vote_count\": 0\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/9t0tJXcOdWwwxmGTk112HGDaT0Q.jpg\",\n            \"genre_ids\": [\n                27,\n                53\n            ],\n            \"id\": 890771,\n            \"original_language\": \"en\",\n            \"original_title\": \"The Black Demon\",\n            \"overview\": \"Oilman Paul Sturges' idyllic family vacation turns into a nightmare when they encounter a ferocious megalodon shark that will stop at nothing to protect its territory. Stranded and under constant attack, Paul and his family must somehow find a way to get his family back to shore alive before it strikes again in this epic battle between humans and nature.\",\n            \"popularity\": 132.947,\n            \"poster_path\": \"/6ecSjKSjgIULyHfrfyyg9vgAI33.jpg\",\n            \"release_date\": \"2023-04-26\",\n            \"title\": \"The Black Demon\",\n            \"video\": false,\n            \"vote_average\": 6.3,\n            \"vote_count\": 505\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/yvotjJ9nKlPKiwc8PtktIjRCkof.jpg\",\n            \"genre_ids\": [\n                18,\n                36,\n                10749\n            ],\n            \"id\": 921452,\n            \"original_language\": \"fr\",\n            \"original_title\": \"Jeanne du Barry\",\n            \"overview\": \"The life of Jeanne Bécu, who was born as the illegitimate daughter of an impoverished seamstress in 1743 and went on to rise through the Court of Louis XV to become his last official mistress.\",\n            \"popularity\": 128.37,\n            \"poster_path\": \"/6AXHh9H7XeUqxl8Ijp9ADkpxfM0.jpg\",\n            \"release_date\": \"2023-05-16\",\n            \"title\": \"Jeanne du Barry\",\n            \"video\": false,\n            \"vote_average\": 7,\n            \"vote_count\": 166\n        }\n    ],\n    \"total_pages\": 37,\n    \"total_results\": 728\n}"
+				}
+			]
+		},
+		{
+			"name": "año",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.themoviedb.org/3/discover/movie?api_key={{api_key}}&primary_release_year=2013",
+					"protocol": "https",
+					"host": [
+						"api",
+						"themoviedb",
+						"org"
+					],
+					"path": [
+						"3",
+						"discover",
+						"movie"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "{{api_key}}"
+						},
+						{
+							"key": "primary_release_year",
+							"value": "2013"
+						}
+					]
+				},
+				"description": "Se utilizan query params para buscar peliculas del año de interes del usuario."
+			},
+			"response": [
+				{
+					"name": "anio",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.themoviedb.org/3/discover/movie?api_key={{api_key}}&primary_release_year=2013",
+							"protocol": "https",
+							"host": [
+								"api",
+								"themoviedb",
+								"org"
+							],
+							"path": [
+								"3",
+								"discover",
+								"movie"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "{{api_key}}"
+								},
+								{
+									"key": "primary_release_year",
+									"value": "2013"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Sep 2023 21:47:28 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "openresty"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "public, max-age=600"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding,Accept-Encoding"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-Cache",
+							"value": "Miss from cloudfront"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 ff89b29055df3eca302a6009f616ee0a.cloudfront.net (CloudFront)"
+						},
+						{
+							"key": "X-Amz-Cf-Pop",
+							"value": "MIA3-C5"
+						},
+						{
+							"key": "Alt-Svc",
+							"value": "h3=\":443\"; ma=86400"
+						},
+						{
+							"key": "X-Amz-Cf-Id",
+							"value": "IX18tdYDEMmCkAF71VSkZCLS0Boxp7NGgqa4yI7aBjMvjGUIzWLTKw=="
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"page\": 1,\n    \"results\": [\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/aQCCpAIdWAp6wyFgjMry4okwrZo.jpg\",\n            \"genre_ids\": [\n                27,\n                53\n            ],\n            \"id\": 138843,\n            \"original_language\": \"en\",\n            \"original_title\": \"The Conjuring\",\n            \"overview\": \"Paranormal investigators Ed and Lorraine Warren work to help a family terrorized by a dark presence in their farmhouse. Forced to confront a powerful entity, the Warrens find themselves caught in the most terrifying case of their lives.\",\n            \"popularity\": 133.304,\n            \"poster_path\": \"/wVYREutTvI2tmxr6ujrHT704wGF.jpg\",\n            \"release_date\": \"2013-07-18\",\n            \"title\": \"The Conjuring\",\n            \"video\": false,\n            \"vote_average\": 7.5,\n            \"vote_count\": 10674\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/mV1HOCbUqx7nfFPwledYsvMYHrw.jpg\",\n            \"genre_ids\": [\n                28,\n                53\n            ],\n            \"id\": 47964,\n            \"original_language\": \"en\",\n            \"original_title\": \"A Good Day to Die Hard\",\n            \"overview\": \"Iconoclastic, take-no-prisoners cop John McClane, finds himself for the first time on foreign soil after traveling to Moscow to help his wayward son Jack - unaware that Jack is really a highly-trained CIA operative out to stop a nuclear weapons heist. With the Russian underworld in pursuit, and battling a countdown to war, the two McClanes discover that their opposing methods make them unstoppable heroes.\",\n            \"popularity\": 108.102,\n            \"poster_path\": \"/evxtv4e8Amm436Y5rW16RkGu8pX.jpg\",\n            \"release_date\": \"2013-02-06\",\n            \"title\": \"A Good Day to Die Hard\",\n            \"video\": false,\n            \"vote_average\": 5.3,\n            \"vote_count\": 6048\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/fydUcbkqLyESCFa9U5XKqi8dIVj.jpg\",\n            \"genre_ids\": [\n                16,\n                10751,\n                12,\n                14\n            ],\n            \"id\": 109445,\n            \"original_language\": \"en\",\n            \"original_title\": \"Frozen\",\n            \"overview\": \"Young princess Anna of Arendelle dreams about finding true love at her sister Elsa’s coronation. Fate takes her on a dangerous journey in an attempt to end the eternal winter that has fallen over the kingdom. She's accompanied by ice delivery man Kristoff, his reindeer Sven, and snowman Olaf. On an adventure where she will find out what friendship, courage, family, and true love really means.\",\n            \"popularity\": 107.911,\n            \"poster_path\": \"/kgwjIb2JDHRhNk13lmSxiClFjVk.jpg\",\n            \"release_date\": \"2013-11-20\",\n            \"title\": \"Frozen\",\n            \"video\": false,\n            \"vote_average\": 7.2,\n            \"vote_count\": 15512\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/63y4XSVTZ7mRzAzkqwi3o0ajDZZ.jpg\",\n            \"genre_ids\": [\n                80,\n                18,\n                35\n            ],\n            \"id\": 106646,\n            \"original_language\": \"en\",\n            \"original_title\": \"The Wolf of Wall Street\",\n            \"overview\": \"A New York stockbroker refuses to cooperate in a large securities fraud case involving corruption on Wall Street, corporate banking world and mob infiltration. Based on Jordan Belfort's autobiography.\",\n            \"popularity\": 102.321,\n            \"poster_path\": \"/34m2tygAYBGqA9MXKhRDtzYd4MR.jpg\",\n            \"release_date\": \"2013-12-25\",\n            \"title\": \"The Wolf of Wall Street\",\n            \"video\": false,\n            \"vote_average\": 8,\n            \"vote_count\": 22204\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/8qkDwjTFoLAwmYh2J9HMeIDRlxd.jpg\",\n            \"genre_ids\": [\n                18,\n                9648\n            ],\n            \"id\": 249397,\n            \"original_language\": \"en\",\n            \"original_title\": \"Nymphomaniac: Vol. II\",\n            \"overview\": \"The continuation of Joe's sexually dictated life delves into the darker aspects of her adult life and what led to her being in Seligman's care.\",\n            \"popularity\": 98.443,\n            \"poster_path\": \"/fYLbO4UpumgNHVnsyDQkXG87Q1k.jpg\",\n            \"release_date\": \"2013-12-25\",\n            \"title\": \"Nymphomaniac: Vol. II\",\n            \"video\": false,\n            \"vote_average\": 6.8,\n            \"vote_count\": 2671\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/7JhsJxNmdW0y4IyNrHy10cECrAz.jpg\",\n            \"genre_ids\": [\n                35\n            ],\n            \"id\": 109418,\n            \"original_language\": \"en\",\n            \"original_title\": \"Grown Ups 2\",\n            \"overview\": \"Lenny has relocated his family back to the small town where he and his friends grew up. This time around, the grown ups are the ones learning lessons from their kids on a day notoriously full of surprises—the last day of school.\",\n            \"popularity\": 82.321,\n            \"poster_path\": \"/hT6ijOtjtYrnyDhN7VA2QWyGFAm.jpg\",\n            \"release_date\": \"2013-07-11\",\n            \"title\": \"Grown Ups 2\",\n            \"video\": false,\n            \"vote_average\": 6.1,\n            \"vote_count\": 3917\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/kg2FOT2Oe5PSCgs3L4vLel6B7ck.jpg\",\n            \"genre_ids\": [\n                28,\n                18,\n                27,\n                878,\n                53\n            ],\n            \"id\": 72190,\n            \"original_language\": \"en\",\n            \"original_title\": \"World War Z\",\n            \"overview\": \"Life for former United Nations investigator Gerry Lane and his family seems content. Suddenly, the world is plagued by a mysterious infection turning whole human populations into rampaging mindless zombies. After barely escaping the chaos, Lane is persuaded to go on a mission to investigate this disease. What follows is a perilous trek around the world where Lane must brave horrific dangers and long odds to find answers before human civilization falls.\",\n            \"popularity\": 81.92,\n            \"poster_path\": \"/1SWBSYJsnyhdNRfLI1T6RsCxAQ4.jpg\",\n            \"release_date\": \"2013-06-20\",\n            \"title\": \"World War Z\",\n            \"video\": false,\n            \"vote_average\": 6.8,\n            \"vote_count\": 14400\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/aH4ZCM94FeWO0GSBLPYxnjkIuUP.jpg\",\n            \"genre_ids\": [\n                12,\n                80,\n                28,\n                53\n            ],\n            \"id\": 204553,\n            \"original_language\": \"ko\",\n            \"original_title\": \"감시자들\",\n            \"overview\": \"Ha Yoon-ju becomes the newest member of a unit within the Korean Police Forces Special Crime Department that specializes in surveillance activities on high-profile criminals. She teams up with Hwang Sang-jun, the veteran leader of the unit, and tries to track down James who is the cold-hearted leader of an armed criminal organization.\",\n            \"popularity\": 77.721,\n            \"poster_path\": \"/77Srq9bAJkB1RE1GBAyBA9Y6ivN.jpg\",\n            \"release_date\": \"2013-07-03\",\n            \"title\": \"Cold Eyes\",\n            \"video\": false,\n            \"vote_average\": 7.5,\n            \"vote_count\": 300\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/ig7qUy7drkEFZNCK7gi0hMn1WMN.jpg\",\n            \"genre_ids\": [\n                28,\n                878,\n                12\n            ],\n            \"id\": 68726,\n            \"original_language\": \"en\",\n            \"original_title\": \"Pacific Rim\",\n            \"overview\": \"Using massive piloted robots to combat the alien threat, earth's survivors take the fight to the invading alien force lurking in the depths of the Pacific Ocean. Nearly defenseless in the face of the relentless enemy, the forces of mankind have no choice but to turn to two unlikely heroes who now stand as earth's final hope against the mounting apocalypse.\",\n            \"popularity\": 75.986,\n            \"poster_path\": \"/8wo4eN8dWKaKlxhSvBz19uvj8gA.jpg\",\n            \"release_date\": \"2013-07-11\",\n            \"title\": \"Pacific Rim\",\n            \"video\": false,\n            \"vote_average\": 6.9,\n            \"vote_count\": 11561\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/aFTYFqrWp4RS46Twm87l5e0ItYb.jpg\",\n            \"genre_ids\": [\n                28,\n                12,\n                878\n            ],\n            \"id\": 68721,\n            \"original_language\": \"en\",\n            \"original_title\": \"Iron Man 3\",\n            \"overview\": \"When Tony Stark's world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution.\",\n            \"popularity\": 71.584,\n            \"poster_path\": \"/qhPtAc1TKbMPqNvcdXSOn9Bn7hZ.jpg\",\n            \"release_date\": \"2013-04-18\",\n            \"title\": \"Iron Man 3\",\n            \"video\": false,\n            \"vote_average\": 6.9,\n            \"vote_count\": 21057\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/69EFgWWPFWbRNHmQgYdSnyJ94Ge.jpg\",\n            \"genre_ids\": [\n                28,\n                12,\n                878\n            ],\n            \"id\": 49521,\n            \"original_language\": \"en\",\n            \"original_title\": \"Man of Steel\",\n            \"overview\": \"A young boy learns that he has extraordinary powers and is not of this earth. As a young man, he journeys to discover where he came from and what he was sent here to do. But the hero in him must emerge if he is to save the world from annihilation and become the symbol of hope for all mankind.\",\n            \"popularity\": 71.453,\n            \"poster_path\": \"/dksTL9NXc3GqPBRHYHcy1aIwjS.jpg\",\n            \"release_date\": \"2013-06-12\",\n            \"title\": \"Man of Steel\",\n            \"video\": false,\n            \"vote_average\": 6.6,\n            \"vote_count\": 14303\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/4zTsF0RtO0av3YX1NaKDqGKPxYF.jpg\",\n            \"genre_ids\": [\n                28,\n                12,\n                14\n            ],\n            \"id\": 76338,\n            \"original_language\": \"en\",\n            \"original_title\": \"Thor: The Dark World\",\n            \"overview\": \"Thor fights to restore order across the cosmos… but an ancient race led by the vengeful Malekith returns to plunge the universe back into darkness. Faced with an enemy that even Odin and Asgard cannot withstand, Thor must embark on his most perilous and personal journey yet, one that will reunite him with Jane Foster and force him to sacrifice everything to save us all.\",\n            \"popularity\": 67.178,\n            \"poster_path\": \"/wp6OxE4poJ4G7c0U2ZIXasTSMR7.jpg\",\n            \"release_date\": \"2013-10-30\",\n            \"title\": \"Thor: The Dark World\",\n            \"video\": false,\n            \"vote_average\": 6.5,\n            \"vote_count\": 16350\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/dIi0De3LzEVSQHEUlh0Q2zUpmeW.jpg\",\n            \"genre_ids\": [\n                12,\n                28,\n                878\n            ],\n            \"id\": 101299,\n            \"original_language\": \"en\",\n            \"original_title\": \"The Hunger Games: Catching Fire\",\n            \"overview\": \"Katniss Everdeen has returned home safe after winning the 74th Annual Hunger Games along with fellow tribute Peeta Mellark. Winning means that they must turn around and leave their family and close friends, embarking on a \\\"Victor's Tour\\\" of the districts. Along the way Katniss senses that a rebellion is simmering, but the Capitol is still very much in control as President Snow prepares the 75th Annual Hunger Games (The Quarter Quell) - a competition that could change Panem forever.\",\n            \"popularity\": 66.341,\n            \"poster_path\": \"/vrQHDXjVmbYzadOXQ0UaObunoy2.jpg\",\n            \"release_date\": \"2013-11-15\",\n            \"title\": \"The Hunger Games: Catching Fire\",\n            \"video\": false,\n            \"vote_average\": 7.4,\n            \"vote_count\": 16177\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/o8ZS811VjYbBi4pRYwILLdWCVey.jpg\",\n            \"genre_ids\": [\n                35\n            ],\n            \"id\": 109439,\n            \"original_language\": \"en\",\n            \"original_title\": \"The Hangover Part III\",\n            \"overview\": \"This time, there's no wedding. No bachelor party. What could go wrong, right? But when the Wolfpack hits the road, all bets are off.\",\n            \"popularity\": 64.387,\n            \"poster_path\": \"/vtxuPWkdllLNLVyGjKYa267ntuH.jpg\",\n            \"release_date\": \"2013-05-23\",\n            \"title\": \"The Hangover Part III\",\n            \"video\": false,\n            \"vote_average\": 6.2,\n            \"vote_count\": 8092\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/pK42lGbT48fClhtEcP7gvk4hoXP.jpg\",\n            \"genre_ids\": [\n                16,\n                10751\n            ],\n            \"id\": 62211,\n            \"original_language\": \"en\",\n            \"original_title\": \"Monsters University\",\n            \"overview\": \"A look at the relationship between Mike and Sulley during their days at Monsters University — when they weren't necessarily the best of friends.\",\n            \"popularity\": 62.882,\n            \"poster_path\": \"/y7thwJ7z5Bplv6vwl6RI0yteaDD.jpg\",\n            \"release_date\": \"2013-06-19\",\n            \"title\": \"Monsters University\",\n            \"video\": false,\n            \"vote_average\": 7,\n            \"vote_count\": 9899\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/o80wcSqQZj5o8jD2Q4bvbqVxD0D.jpg\",\n            \"genre_ids\": [\n                35,\n                18\n            ],\n            \"id\": 211954,\n            \"original_language\": \"es\",\n            \"original_title\": \"No se aceptan devoluciones\",\n            \"overview\": \"Valentin is Acapulco's resident playboy, until a former fling leaves a baby on his doorstep and him heading with her out of Mexico.\",\n            \"popularity\": 61.277,\n            \"poster_path\": \"/4f0qaU7cWmO9kYEkr3QGdA7KNFR.jpg\",\n            \"release_date\": \"2013-07-20\",\n            \"title\": \"Instructions Not Included\",\n            \"video\": false,\n            \"vote_average\": 7.7,\n            \"vote_count\": 811\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/9J3HHP3kQ5ZStyirJyWPWtvvrHY.jpg\",\n            \"genre_ids\": [\n                878,\n                27,\n                53\n            ],\n            \"id\": 158015,\n            \"original_language\": \"en\",\n            \"original_title\": \"The Purge\",\n            \"overview\": \"Given the country's overcrowded prisons, the U.S. government begins to allow 12-hour periods of time in which all illegal activity is legal. During one of these free-for-alls, a family must protect themselves from a home invasion.\",\n            \"popularity\": 61.162,\n            \"poster_path\": \"/x6hwbnR2nGacSzljqYaXY25w1Me.jpg\",\n            \"release_date\": \"2013-05-31\",\n            \"title\": \"The Purge\",\n            \"video\": false,\n            \"vote_average\": 6.3,\n            \"vote_count\": 7862\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/4UvNG6JFaSzMLUXUsq62VcVjNhP.jpg\",\n            \"genre_ids\": [\n                16,\n                35,\n                10751\n            ],\n            \"id\": 93456,\n            \"original_language\": \"en\",\n            \"original_title\": \"Despicable Me 2\",\n            \"overview\": \"Gru is recruited by the Anti-Villain League to help deal with a powerful new super criminal.\",\n            \"popularity\": 60.969,\n            \"poster_path\": \"/5Fh4NdoEnCjCK9wLjdJ9DJNFl2b.jpg\",\n            \"release_date\": \"2013-06-26\",\n            \"title\": \"Despicable Me 2\",\n            \"video\": false,\n            \"vote_average\": 6.9,\n            \"vote_count\": 10518\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/npCPnwDyWfQltGfIZKN6WqeUXGI.jpg\",\n            \"genre_ids\": [\n                14,\n                12,\n                28\n            ],\n            \"id\": 57158,\n            \"original_language\": \"en\",\n            \"original_title\": \"The Hobbit: The Desolation of Smaug\",\n            \"overview\": \"The Dwarves, Bilbo and Gandalf have successfully escaped the Misty Mountains, and Bilbo has gained the One Ring. They all continue their journey to get their gold back from the Dragon, Smaug.\",\n            \"popularity\": 59.511,\n            \"poster_path\": \"/70Ux6sHFIqu0bVFp8xzBZCOQFXM.jpg\",\n            \"release_date\": \"2013-12-11\",\n            \"title\": \"The Hobbit: The Desolation of Smaug\",\n            \"video\": false,\n            \"vote_average\": 7.6,\n            \"vote_count\": 12248\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/pEhXq18GVe1dg2ltplcxtGWfSje.jpg\",\n            \"genre_ids\": [\n                878,\n                12,\n                28,\n                53\n            ],\n            \"id\": 72559,\n            \"original_language\": \"en\",\n            \"original_title\": \"G.I. Joe: Retaliation\",\n            \"overview\": \"Framed for crimes against the country, the G.I. Joe team is terminated by Presidential order. This forces the G.I. Joes into not only fighting their mortal enemy Cobra; they are forced to contend with threats from within the government that jeopardize their very existence.\",\n            \"popularity\": 59.443,\n            \"poster_path\": \"/3rWIZMzTKcCtV0eHJ70Z4Ru659f.jpg\",\n            \"release_date\": \"2013-03-27\",\n            \"title\": \"G.I. Joe: Retaliation\",\n            \"video\": false,\n            \"vote_average\": 5.6,\n            \"vote_count\": 5211\n        }\n    ],\n    \"total_pages\": 1006,\n    \"total_results\": 20111\n}"
+				}
+			]
+		},
+		{
+			"name": "tendencias",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.themoviedb.org/3/movie/popular?api_key={{api_key}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"themoviedb",
+						"org"
+					],
+					"path": [
+						"3",
+						"movie",
+						"popular"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "{{api_key}}"
+						}
+					]
+				},
+				"description": "Se obtienen las peliculas en tendencia."
+			},
+			"response": [
+				{
+					"name": "populares",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.themoviedb.org/3/movie/popular?api_key={{api_key}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"themoviedb",
+								"org"
+							],
+							"path": [
+								"3",
+								"movie",
+								"popular"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "{{api_key}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Sep 2023 16:42:52 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "openresty"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "public, max-age=21600"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding,Accept-Encoding"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-Cache",
+							"value": "Miss from cloudfront"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 a782b2219163c48526f5b10315d332fa.cloudfront.net (CloudFront)"
+						},
+						{
+							"key": "X-Amz-Cf-Pop",
+							"value": "MIA3-P5"
+						},
+						{
+							"key": "Alt-Svc",
+							"value": "h3=\":443\"; ma=86400"
+						},
+						{
+							"key": "X-Amz-Cf-Id",
+							"value": "30AF1782ZGJZNQNkMbu0JF5QD71NTNMJKoQ8VEeQzXIFwBWoNR3KaA=="
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"page\": 1,\n    \"results\": [\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/H6j5smdpRqP9a8UnhWp6zfl0SC.jpg\",\n            \"genre_ids\": [\n                28,\n                878,\n                12\n            ],\n            \"id\": 565770,\n            \"original_language\": \"en\",\n            \"original_title\": \"Blue Beetle\",\n            \"overview\": \"Recent college grad Jaime Reyes returns home full of aspirations for his future, only to find that home is not quite as he left it. As he searches to find his purpose in the world, fate intervenes when Jaime unexpectedly finds himself in possession of an ancient relic of alien biotechnology: the Scarab.\",\n            \"popularity\": 4198.111,\n            \"poster_path\": \"/mXLOHHc1Zeuwsl4xYKjKh2280oL.jpg\",\n            \"release_date\": \"2023-08-16\",\n            \"title\": \"Blue Beetle\",\n            \"video\": false,\n            \"vote_average\": 7.1,\n            \"vote_count\": 824\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/iiXliCeykkzmJ0Eg9RYJ7F2CWSz.jpg\",\n            \"genre_ids\": [\n                28,\n                9648,\n                53,\n                80\n            ],\n            \"id\": 762430,\n            \"original_language\": \"en\",\n            \"original_title\": \"Retribution\",\n            \"overview\": \"When a mysterious caller puts a bomb under his car seat, Matt Turner begins a high-speed chase across the city to complete a specific series of tasks. With his kids trapped in the back seat and a bomb that will explode if they get out of the car, a normal commute becomes a twisted game of life or death as Matt follows the stranger's increasingly dangerous instructions in a race against time to save his family.\",\n            \"popularity\": 2304.763,\n            \"poster_path\": \"/oUmmY7QWWn7OhKlcPOnirHJpP1F.jpg\",\n            \"release_date\": \"2023-08-23\",\n            \"title\": \"Retribution\",\n            \"video\": false,\n            \"vote_average\": 6.8,\n            \"vote_count\": 199\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/8pjWz2lt29KyVGoq1mXYu6Br7dE.jpg\",\n            \"genre_ids\": [\n                28,\n                878,\n                27\n            ],\n            \"id\": 615656,\n            \"original_language\": \"en\",\n            \"original_title\": \"Meg 2: The Trench\",\n            \"overview\": \"An exploratory dive into the deepest depths of the ocean of a daring research team spirals into chaos when a malevolent mining operation threatens their mission and forces them into a high-stakes battle for survival.\",\n            \"popularity\": 1954.996,\n            \"poster_path\": \"/4m1Au3YkjqsxF8iwQy0fPYSxE0h.jpg\",\n            \"release_date\": \"2023-08-02\",\n            \"title\": \"Meg 2: The Trench\",\n            \"video\": false,\n            \"vote_average\": 7,\n            \"vote_count\": 1912\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/iIvQnZyzgx9TkbrOgcXx0p7aLiq.jpg\",\n            \"genre_ids\": [\n                27,\n                53\n            ],\n            \"id\": 1008042,\n            \"original_language\": \"en\",\n            \"original_title\": \"Talk to Me\",\n            \"overview\": \"When a group of friends discover how to conjure spirits using an embalmed hand, they become hooked on the new thrill, until one of them goes too far and unleashes terrifying supernatural forces.\",\n            \"popularity\": 1762.732,\n            \"poster_path\": \"/kdPMUMJzyYAc4roD52qavX0nLIC.jpg\",\n            \"release_date\": \"2023-07-26\",\n            \"title\": \"Talk to Me\",\n            \"video\": false,\n            \"vote_average\": 7.2,\n            \"vote_count\": 826\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/4XM8DUTQb3lhLemJC51Jx4a2EuA.jpg\",\n            \"genre_ids\": [\n                28,\n                80,\n                53\n            ],\n            \"id\": 385687,\n            \"original_language\": \"en\",\n            \"original_title\": \"Fast X\",\n            \"overview\": \"Over many missions and against impossible odds, Dom Toretto and his family have outsmarted, out-nerved and outdriven every foe in their path. Now, they confront the most lethal opponent they've ever faced: A terrifying threat emerging from the shadows of the past who's fueled by blood revenge, and who is determined to shatter this family and destroy everything—and everyone—that Dom loves, forever.\",\n            \"popularity\": 1751.474,\n            \"poster_path\": \"/fiVW06jE7z9YnO4trhaMEdclSiC.jpg\",\n            \"release_date\": \"2023-05-17\",\n            \"title\": \"Fast X\",\n            \"video\": false,\n            \"vote_average\": 7.3,\n            \"vote_count\": 3823\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/ctMserH8g2SeOAnCw5gFjdQF8mo.jpg\",\n            \"genre_ids\": [\n                35,\n                12,\n                14\n            ],\n            \"id\": 346698,\n            \"original_language\": \"en\",\n            \"original_title\": \"Barbie\",\n            \"overview\": \"Barbie and Ken are having the time of their lives in the colorful and seemingly perfect world of Barbie Land. However, when they get a chance to go to the real world, they soon discover the joys and perils of living among humans.\",\n            \"popularity\": 1598.743,\n            \"poster_path\": \"/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg\",\n            \"release_date\": \"2023-07-19\",\n            \"title\": \"Barbie\",\n            \"video\": false,\n            \"vote_average\": 7.3,\n            \"vote_count\": 4963\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/53z2fXEKfnNg2uSOPss2unPBGX1.jpg\",\n            \"genre_ids\": [\n                27,\n                9648,\n                53\n            ],\n            \"id\": 968051,\n            \"original_language\": \"en\",\n            \"original_title\": \"The Nun II\",\n            \"overview\": \"In 1956 France, a priest is violently murdered, and Sister Irene begins to investigate. She once again comes face-to-face with a powerful evil.\",\n            \"popularity\": 1428.836,\n            \"poster_path\": \"/5gzzkR7y3hnY8AD1wXjCnVlHba5.jpg\",\n            \"release_date\": \"2023-09-06\",\n            \"title\": \"The Nun II\",\n            \"video\": false,\n            \"vote_average\": 6.6,\n            \"vote_count\": 300\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/c6Splshb8lb2Q9OvUfhpqXl7uP0.jpg\",\n            \"genre_ids\": [\n                28,\n                53\n            ],\n            \"id\": 717930,\n            \"original_language\": \"en\",\n            \"original_title\": \"Kandahar\",\n            \"overview\": \"After his mission is exposed, an undercover CIA operative stuck deep in hostile territory in Afghanistan must fight his way out, alongside his Afghan translator, to an extraction point in Kandahar, all whilst avoiding elite enemy forces and foreign spies tasked with hunting them down.\",\n            \"popularity\": 1073.901,\n            \"poster_path\": \"/lCanGgsqF4xD2WA5NF8PWeT3IXd.jpg\",\n            \"release_date\": \"2023-05-25\",\n            \"title\": \"Kandahar\",\n            \"video\": false,\n            \"vote_average\": 6.9,\n            \"vote_count\": 544\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/4fLZUr1e65hKPPVw0R3PmKFKxj1.jpg\",\n            \"genre_ids\": [\n                16,\n                35,\n                10751,\n                14,\n                10749\n            ],\n            \"id\": 976573,\n            \"original_language\": \"en\",\n            \"original_title\": \"Elemental\",\n            \"overview\": \"In a city where fire, water, land and air residents live together, a fiery young woman and a go-with-the-flow guy will discover something elemental: how much they have in common.\",\n            \"popularity\": 1009.664,\n            \"poster_path\": \"/4Y1WNkd88JXmGfhtWR7dmDAo1T2.jpg\",\n            \"release_date\": \"2023-06-14\",\n            \"title\": \"Elemental\",\n            \"video\": false,\n            \"vote_average\": 7.8,\n            \"vote_count\": 2345\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/iOJX54nVAsnPawagFiWXKv1Y6sB.jpg\",\n            \"genre_ids\": [\n                16,\n                12,\n                10751\n            ],\n            \"id\": 1076364,\n            \"original_language\": \"en\",\n            \"original_title\": \"Carl's Date\",\n            \"overview\": \"Carl Fredricksen reluctantly agrees to go on a date with a lady friend—but admittedly has no idea how dating works these days. Ever the helpful friend, Dug steps in to calm Carl's pre-date jitters and offer some tried-and-true tips for making friends—if you're a dog.\",\n            \"popularity\": 911.8,\n            \"poster_path\": \"/y8NtM6q3PzntqyNRNw6wgicwRYl.jpg\",\n            \"release_date\": \"2023-06-15\",\n            \"title\": \"Carl's Date\",\n            \"video\": false,\n            \"vote_average\": 7.9,\n            \"vote_count\": 158\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/35z8hWuzfFUZQaYog8E9LsXW3iI.jpg\",\n            \"genre_ids\": [\n                12,\n                28\n            ],\n            \"id\": 335977,\n            \"original_language\": \"en\",\n            \"original_title\": \"Indiana Jones and the Dial of Destiny\",\n            \"overview\": \"Finding himself in a new era, and approaching retirement, Indy wrestles with fitting into a world that seems to have outgrown him. But as the tentacles of an all-too-familiar evil return in the form of an old rival, Indy must don his hat and pick up his whip once more to make sure an ancient and powerful artifact doesn't fall into the wrong hands.\",\n            \"popularity\": 856.387,\n            \"poster_path\": \"/Af4bXE63pVsb2FtbW8uYIyPBadD.jpg\",\n            \"release_date\": \"2023-06-28\",\n            \"title\": \"Indiana Jones and the Dial of Destiny\",\n            \"video\": false,\n            \"vote_average\": 6.7,\n            \"vote_count\": 1708\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/waBWlJlMpyFb7STkFHfFvJKgwww.jpg\",\n            \"genre_ids\": [\n                28,\n                18\n            ],\n            \"id\": 678512,\n            \"original_language\": \"en\",\n            \"original_title\": \"Sound of Freedom\",\n            \"overview\": \"The story of Tim Ballard, a former US government agent, who quits his job in order to devote his life to rescuing children from global sex traffickers.\",\n            \"popularity\": 745.902,\n            \"poster_path\": \"/kSf9svfL2WrKeuK8W08xeR5lTn8.jpg\",\n            \"release_date\": \"2023-07-03\",\n            \"title\": \"Sound of Freedom\",\n            \"video\": false,\n            \"vote_average\": 8,\n            \"vote_count\": 471\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/2vFuG6bWGyQUzYS9d69E5l85nIz.jpg\",\n            \"genre_ids\": [\n                28,\n                12,\n                878\n            ],\n            \"id\": 667538,\n            \"original_language\": \"en\",\n            \"original_title\": \"Transformers: Rise of the Beasts\",\n            \"overview\": \"When a new threat capable of destroying the entire planet emerges, Optimus Prime and the Autobots must team up with a powerful faction known as the Maximals. With the fate of humanity hanging in the balance, humans Noah and Elena will do whatever it takes to help the Transformers as they engage in the ultimate battle to save Earth.\",\n            \"popularity\": 724.903,\n            \"poster_path\": \"/gPbM0MK8CP8A174rmUwGsADNYKD.jpg\",\n            \"release_date\": \"2023-06-06\",\n            \"title\": \"Transformers: Rise of the Beasts\",\n            \"video\": false,\n            \"vote_average\": 7.5,\n            \"vote_count\": 3224\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/4HodYYKEIsGOdinkGi2Ucz6X9i0.jpg\",\n            \"genre_ids\": [\n                16,\n                28,\n                12\n            ],\n            \"id\": 569094,\n            \"original_language\": \"en\",\n            \"original_title\": \"Spider-Man: Across the Spider-Verse\",\n            \"overview\": \"After reuniting with Gwen Stacy, Brooklyn’s full-time, friendly neighborhood Spider-Man is catapulted across the Multiverse, where he encounters the Spider Society, a team of Spider-People charged with protecting the Multiverse’s very existence. But when the heroes clash on how to handle a new threat, Miles finds himself pitted against the other Spiders and must set out on his own to save those he loves most.\",\n            \"popularity\": 658.308,\n            \"poster_path\": \"/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg\",\n            \"release_date\": \"2023-05-31\",\n            \"title\": \"Spider-Man: Across the Spider-Verse\",\n            \"video\": false,\n            \"vote_average\": 8.5,\n            \"vote_count\": 4324\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/yF1eOkaYvwiORauRCPWznV9xVvi.jpg\",\n            \"genre_ids\": [\n                28,\n                12,\n                878\n            ],\n            \"id\": 298618,\n            \"original_language\": \"en\",\n            \"original_title\": \"The Flash\",\n            \"overview\": \"When his attempt to save his family inadvertently alters the future, Barry Allen becomes trapped in a reality in which General Zod has returned and there are no Super Heroes to turn to. In order to save the world that he is in and return to the future that he knows, Barry's only hope is to race for his life. But will making the ultimate sacrifice be enough to reset the universe?\",\n            \"popularity\": 622.662,\n            \"poster_path\": \"/rktDFPbfHfUbArZ6OOOKsXcv0Bm.jpg\",\n            \"release_date\": \"2023-06-13\",\n            \"title\": \"The Flash\",\n            \"video\": false,\n            \"vote_average\": 6.9,\n            \"vote_count\": 2913\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/xsnpgM2Si1hG7daLP1XE7uAfKKH.jpg\",\n            \"genre_ids\": [\n                80,\n                28,\n                53\n            ],\n            \"id\": 1152797,\n            \"original_language\": \"pl\",\n            \"original_title\": \"Freestyle\",\n            \"overview\": \"Trying to check out a recording from his debut album, a street rapper and his friend run into trouble when a major drug deal turns into a total disaster for them.\",\n            \"popularity\": 593.625,\n            \"poster_path\": \"/hNPJzlPlIVgTAjb2Mgqwl1QqydK.jpg\",\n            \"release_date\": \"2023-09-13\",\n            \"title\": \"Freestyle\",\n            \"video\": false,\n            \"vote_average\": 6.5,\n            \"vote_count\": 22\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/6tCTR5Gr91Kocrt0goLrpFs1tqh.jpg\",\n            \"genre_ids\": [\n                18\n            ],\n            \"id\": 833326,\n            \"original_language\": \"fr\",\n            \"original_title\": \"Rien à foutre\",\n            \"overview\": \"Cassandre, 26, is a flight attendant for a low-cost airline. Based in Lanzarote, she’s always willing to take on extra hours and carries out her duties with robotic efficiency. On the side, she just goes with the flow and floats between Tinder, parties and lazy days. When she suddenly gets dismissed, she is forced to return home.\",\n            \"popularity\": 592.172,\n            \"poster_path\": \"/wLZ5jijVpOxHuBLmsICKLXwlldu.jpg\",\n            \"release_date\": \"2022-03-02\",\n            \"title\": \"Zero Fucks Given\",\n            \"video\": false,\n            \"vote_average\": 6.3,\n            \"vote_count\": 191\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/w2nFc2Rsm93PDkvjY4LTn17ePO0.jpg\",\n            \"genre_ids\": [\n                16,\n                35,\n                28\n            ],\n            \"id\": 614930,\n            \"original_language\": \"en\",\n            \"original_title\": \"Teenage Mutant Ninja Turtles: Mutant Mayhem\",\n            \"overview\": \"After years of being sheltered from the human world, the Turtle brothers set out to win the hearts of New Yorkers and be accepted as normal teenagers through heroic acts. Their new friend April O'Neil helps them take on a mysterious crime syndicate, but they soon get in over their heads when an army of mutants is unleashed upon them.\",\n            \"popularity\": 580.352,\n            \"poster_path\": \"/ueO9MYIOHO7M1PiMUeX74uf8fB9.jpg\",\n            \"release_date\": \"2023-07-31\",\n            \"title\": \"Teenage Mutant Ninja Turtles: Mutant Mayhem\",\n            \"video\": false,\n            \"vote_average\": 7.3,\n            \"vote_count\": 601\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/7I6VUdPj6tQECNHdviJkUHD2u89.jpg\",\n            \"genre_ids\": [\n                28,\n                53,\n                80\n            ],\n            \"id\": 603692,\n            \"original_language\": \"en\",\n            \"original_title\": \"John Wick: Chapter 4\",\n            \"overview\": \"With the price on his head ever increasing, John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes.\",\n            \"popularity\": 579.749,\n            \"poster_path\": \"/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg\",\n            \"release_date\": \"2023-03-22\",\n            \"title\": \"John Wick: Chapter 4\",\n            \"video\": false,\n            \"vote_average\": 7.8,\n            \"vote_count\": 4590\n        },\n        {\n            \"adult\": false,\n            \"backdrop_path\": \"/jkKVLzLWjSvTnc84VzeljhSy6j8.jpg\",\n            \"genre_ids\": [\n                10749,\n                18\n            ],\n            \"id\": 820525,\n            \"original_language\": \"en\",\n            \"original_title\": \"After Everything\",\n            \"overview\": \"Besieged by writer’s block and the crushing breakup with Tessa, Hardin travels to Portugal in search of a woman he wronged in the past – and to find himself. Hoping to win back Tessa, he realizes he needs to change his ways before he can make the ultimate commitment.\",\n            \"popularity\": 575.804,\n            \"poster_path\": \"/gZLGCibvFY4zmt8sWUZcbBTHRtk.jpg\",\n            \"release_date\": \"2023-09-13\",\n            \"title\": \"After Everything\",\n            \"video\": false,\n            \"vote_average\": 6.4,\n            \"vote_count\": 44\n        }\n    ],\n    \"total_pages\": 40229,\n    \"total_results\": 804577\n}"
+				}
+			]
+		},
+		{
+			"name": "generos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.themoviedb.org/3/genre/movie/list?api_key={{api_key}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"themoviedb",
+						"org"
+					],
+					"path": [
+						"3",
+						"genre",
+						"movie",
+						"list"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "{{api_key}}"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "generos",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.themoviedb.org/3/genre/movie/list?api_key={{api_key}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"themoviedb",
+								"org"
+							],
+							"path": [
+								"3",
+								"genre",
+								"movie",
+								"list"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "{{api_key}}"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Server",
+							"value": "openresty"
+						},
+						{
+							"key": "X-Memc",
+							"value": "HIT"
+						},
+						{
+							"key": "X-Memc-Key",
+							"value": "685ac3e7586d85c80f8163009234286b"
+						},
+						{
+							"key": "X-Memc-Age",
+							"value": "3848"
+						},
+						{
+							"key": "X-Memc-Expires",
+							"value": "24759"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 26 Sep 2023 16:32:33 GMT"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "public, max-age=26507"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"98d6f4fb3a0e0c77544a7277f32baebb\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-Cache",
+							"value": "Hit from cloudfront"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 a782b2219163c48526f5b10315d332fa.cloudfront.net (CloudFront)"
+						},
+						{
+							"key": "X-Amz-Cf-Pop",
+							"value": "MIA3-P5"
+						},
+						{
+							"key": "Alt-Svc",
+							"value": "h3=\":443\"; ma=86400"
+						},
+						{
+							"key": "X-Amz-Cf-Id",
+							"value": "cdEHPTaJsbEx-1ynyCEUPsfcCQkJaz6aGoBqop2PYRnh06PYUK9ipQ=="
+						},
+						{
+							"key": "Age",
+							"value": "1176"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"genres\": [\n        {\n            \"id\": 28,\n            \"name\": \"Action\"\n        },\n        {\n            \"id\": 12,\n            \"name\": \"Adventure\"\n        },\n        {\n            \"id\": 16,\n            \"name\": \"Animation\"\n        },\n        {\n            \"id\": 35,\n            \"name\": \"Comedy\"\n        },\n        {\n            \"id\": 80,\n            \"name\": \"Crime\"\n        },\n        {\n            \"id\": 99,\n            \"name\": \"Documentary\"\n        },\n        {\n            \"id\": 18,\n            \"name\": \"Drama\"\n        },\n        {\n            \"id\": 10751,\n            \"name\": \"Family\"\n        },\n        {\n            \"id\": 14,\n            \"name\": \"Fantasy\"\n        },\n        {\n            \"id\": 36,\n            \"name\": \"History\"\n        },\n        {\n            \"id\": 27,\n            \"name\": \"Horror\"\n        },\n        {\n            \"id\": 10402,\n            \"name\": \"Music\"\n        },\n        {\n            \"id\": 9648,\n            \"name\": \"Mystery\"\n        },\n        {\n            \"id\": 10749,\n            \"name\": \"Romance\"\n        },\n        {\n            \"id\": 878,\n            \"name\": \"Science Fiction\"\n        },\n        {\n            \"id\": 10770,\n            \"name\": \"TV Movie\"\n        },\n        {\n            \"id\": 53,\n            \"name\": \"Thriller\"\n        },\n        {\n            \"id\": 10752,\n            \"name\": \"War\"\n        },\n        {\n            \"id\": 37,\n            \"name\": \"Western\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}

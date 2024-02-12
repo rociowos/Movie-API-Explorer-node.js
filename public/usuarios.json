@@ -1,0 +1,205 @@
+{
+    "usuarios": [
+      {
+        "id": 1,
+        "nombre": "Juan Pérez"
+      },
+      {
+        "id": 2,
+        "nombre": "María González"
+      },
+      {
+        "id": 3,
+        "nombre": "Luis Rodríguez"
+      },
+      {
+        "id": 4,
+        "nombre": "Ana Martínez"
+      },
+      {
+        "id": 5,
+        "nombre": "Carlos López"
+      },
+      {
+        "id": 6,
+        "nombre": "Laura Sánchez"
+      },
+      {
+        "id": 7,
+        "nombre": "Pedro García"
+      },
+      {
+        "id": 8,
+        "nombre": "Rosa Fernández"
+      },
+      {
+        "id": 9,
+        "nombre": "Javier Ramírez"
+      },
+      {
+        "id": 10,
+        "nombre": "Sofía Torres"
+      },
+      {
+        "id": 11,
+        "nombre": "Miguel Reyes"
+      },
+      {
+        "id": 12,
+        "nombre": "Carmen Morales"
+      },
+      {
+        "id": 13,
+        "nombre": "Diego Castro"
+      },
+      {
+        "id": 14,
+        "nombre": "Paula Herrera"
+      },
+      {
+        "id": 15,
+        "nombre": "Fernando Jiménez"
+      },
+      {
+        "id": 16,
+        "nombre": "Isabel Pérez"
+      },
+      {
+        "id": 17,
+        "nombre": "José García"
+      },
+      {
+        "id": 18,
+        "nombre": "Elena López"
+      },
+      {
+        "id": 19,
+        "nombre": "Andrés Martínez"
+      },
+      {
+        "id": 20,
+        "nombre": "Lucía González"
+      },
+      {
+        "id": 21,
+        "nombre": "Ricardo Ruiz"
+      },
+      {
+        "id": 22,
+        "nombre": "Marina Rodríguez"
+      },
+      {
+        "id": 23,
+        "nombre": "Alejandro Torres"
+      },
+      {
+        "id": 24,
+        "nombre": "Raquel Sánchez"
+      },
+      {
+        "id": 25,
+        "nombre": "Gabriel Flores"
+      },
+      {
+        "id": 26,
+        "nombre": "Marta Ramírez"
+      },
+      {
+        "id": 27,
+        "nombre": "Antonio Díaz"
+      },
+      {
+        "id": 28,
+        "nombre": "Sara Vargas"
+      },
+      {
+        "id": 29,
+        "nombre": "Alberto Castro"
+      },
+      {
+        "id": 30,
+        "nombre": "Cristina Herrera"
+      },
+      {
+        "id": 31,
+        "nombre": "Francisco López"
+      },
+      {
+        "id": 32,
+        "nombre": "Natalia González"
+      },
+      {
+        "id": 33,
+        "nombre": "Héctor Torres"
+      },
+      {
+        "id": 34,
+        "nombre": "Beatriz Martínez"
+      },
+      {
+        "id": 35,
+        "nombre": "Joaquín Pérez"
+      },
+      {
+        "id": 36,
+        "nombre": "Lourdes Rodríguez"
+      },
+      {
+        "id": 37,
+        "nombre": "Mario Sánchez"
+      },
+      {
+        "id": 38,
+        "nombre": "Adela Jiménez"
+      },
+      {
+        "id": 39,
+        "nombre": "Víctor García"
+      },
+      {
+        "id": 40,
+        "nombre": "Clara Morales"
+      },
+      {
+        "id": 41,
+        "nombre": "Manuel Castro"
+      },
+      {
+        "id": 42,
+        "nombre": "Carolina Ruiz"
+      },
+      {
+        "id": 43,
+        "nombre": "Alberto Díaz"
+      },
+      {
+        "id": 44,
+        "nombre": "Elisa Sánchez"
+      },
+      {
+        "id": 45,
+        "nombre": "Jorge Pérez"
+      },
+      {
+        "id": 46,
+        "nombre": "Sandra Martínez"
+      },
+      {
+        "id": 47,
+        "nombre": "Roberto López"
+      },
+      {
+        "id": 48,
+        "nombre": "Ana Ramírez"
+      },
+      {
+        "id": 49,
+        "nombre": "Juan González"
+      },
+      {
+        "id": 50,
+        "nombre": "Lucía Torres"
+      }
+    ]
+  }
+  
