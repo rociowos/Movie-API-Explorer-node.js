@@ -1,3 +1,4 @@
 .env
 node_modules
 TP-1-Labo4.code-workspace
+.vscode/
